@@ -1,0 +1,123 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    overflow-x: hidden; 
+}
+
+canvas {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+}
+
+.hi-text{
+    /* makes the elemnt fixxes when the page is scrolled */
+    position: fixed;
+    /* determines a stacking order. The higher the number the more important */
+    z-index: 2;
+    color: white;
+    font-size: 5rem;
+    /* Position */
+    right: 25%;
+    bottom: 55%;
+    /* Moves it 20% if its width to the left and 60% of its height upward */
+    transform: translate(-20%,-60%);
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.EmailImg{
+    background: None;
+    height:auto;
+    width: 75px;
+    position: fixed;
+    z-index: 1;
+    right: 40%;
+    bottom: 45%;
+    
+}
+
+.about-me {
+    right: 65%;
+    bottom: 20%;
+    position: fixed;
+    z-index: 2;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 1.2rem;
+    color: white;
+    border-left: 3px dashed #a3a8a4;
+    padding: 20px;
+    width: 25%; 
+    margin: 0; 
+    background: linear-gradient(135deg, rgba(50, 50, 50, 0.7), rgba(0, 0, 0, 0.7)); /* Dark background with gradient */
+    border-radius: 8px;
+    box-shadow: black;
+    backdrop-filter: blur(5px);
+    opacity: 0.95;
+  }
+  
+  .about-me p {
+    margin: 15px 0;
+    line-height: 1.6;
+  }
+  
+  .about-me strong {
+    color: #cbcac8;
+    font-weight: bold;
+    font-size: 1.1rem;
+  }
+
+  .LinkedinImg, .GithubImg {
+    width: 40px;
+    height: 40px;
+    margin-right: 15px;
+  }
+  
+  .LinkedinImg:hover, .GithubImg:hover {
+    opacity: 0.8;
+    transform: scale(1.3);
+    transition: transform 0.3s, opacity 0.3s;
+  }
+
+.my-paragraph {
+    right: 5%;
+    bottom: 10%;
+    position: fixed;
+    z-index: 2;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 1rem;
+    color: white;
+    border-left: 3px dashed #a3a8a4;
+    padding: 20px;
+    width: 25%; 
+    margin: 0; 
+    background: linear-gradient(135deg, rgba(50, 50, 50, 0.7), rgba(0, 0, 0, 0.7)); /* Dark background with gradient */
+    border-radius: 8px;
+    box-shadow: black;
+    backdrop-filter: blur(5px);
+    opacity: 0.95;
+  }
+  
+  .my-paragraph p {
+    margin: 15px 0;
+    line-height: 1.6;
+  }
+
+.download-resume {
+    right: 65%;
+    bottom: 10%;
+    position: fixed;
+    z-index: 2;
+    color: white;
+    border-left: 3px dashed #a3a8a4;
+    padding: 20px;
+    width: 25%; 
+    margin: 0; 
+    background: linear-gradient(135deg, rgba(50, 50, 50, 0.7), rgba(0, 0, 0, 0.7)); /* Dark background with gradient */
+    border-radius: 8px;
+    box-shadow: black;
+    backdrop-filter: blur(5px);
+    opacity: 0.95;
+}
