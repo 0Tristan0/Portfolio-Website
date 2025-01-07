@@ -5,6 +5,7 @@
 }
 body{
     overflow-x: hidden; 
+    background-color: #0f0f0f;
 }
 
 canvas {
@@ -28,47 +29,7 @@ canvas {
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
-.EmailImg{
-    background: None;
-    height:auto;
-    width: 75px;
-    position: fixed;
-    z-index: 1;
-    right: 40%;
-    bottom: 45%;
-    
-}
-
-.about-me {
-    right: 65%;
-    bottom: 20%;
-    position: fixed;
-    z-index: 2;
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    font-size: 1.2rem;
-    color: white;
-    border-left: 3px dashed #a3a8a4;
-    padding: 20px;
-    width: 25%; 
-    margin: 0; 
-    background: linear-gradient(135deg, rgba(50, 50, 50, 0.7), rgba(0, 0, 0, 0.7)); /* Dark background with gradient */
-    border-radius: 8px;
-    box-shadow: black;
-    backdrop-filter: blur(5px);
-    opacity: 0.95;
-  }
   
-  .about-me p {
-    margin: 15px 0;
-    line-height: 1.6;
-  }
-  
-  .about-me strong {
-    color: #cbcac8;
-    font-weight: bold;
-    font-size: 1.1rem;
-  }
-
   .LinkedinImg, .GithubImg {
     width: 40px;
     height: 40px;
@@ -81,43 +42,76 @@ canvas {
     transition: transform 0.3s, opacity 0.3s;
   }
 
-.my-paragraph {
-    right: 5%;
-    bottom: 10%;
-    position: fixed;
-    z-index: 2;
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    font-size: 1rem;
-    color: white;
-    border-left: 3px dashed #a3a8a4;
-    padding: 20px;
-    width: 25%; 
-    margin: 0; 
-    background: linear-gradient(135deg, rgba(50, 50, 50, 0.7), rgba(0, 0, 0, 0.7)); /* Dark background with gradient */
-    border-radius: 8px;
-    box-shadow: black;
-    backdrop-filter: blur(5px);
-    opacity: 0.95;
-  }
-  
-  .my-paragraph p {
-    margin: 15px 0;
-    line-height: 1.6;
-  }
-
-.download-resume {
-    right: 65%;
-    bottom: 10%;
-    position: fixed;
-    z-index: 2;
-    color: white;
-    border-left: 3px dashed #a3a8a4;
-    padding: 20px;
-    width: 25%; 
-    margin: 0; 
-    background: linear-gradient(135deg, rgba(50, 50, 50, 0.7), rgba(0, 0, 0, 0.7)); /* Dark background with gradient */
-    border-radius: 8px;
-    box-shadow: black;
-    backdrop-filter: blur(5px);
-    opacity: 0.95;
+.about h1{
+  color: rgb(85, 199, 98);
+  font-size: 2.4rem;
+  font-family: 'Trebuchet MS';
+  text-align: center;
+  padding: 20px;
+  margin-top: 100px;
 }
+
+.about-content{
+  display:flex;
+  margin-top: 40px;
+}
+
+.para-about{
+  color: grey;
+  font-size: 1.4rem;
+  font-family: 'Poppins';
+  text-align: left;
+  padding: 20px;
+  margin-right: 5%;
+  width: 60%;
+
+  
+}
+
+.info{
+  color: grey;
+  font-size: 1.2rem;
+  font-family: 'Poppins';
+  text-align: left;
+  padding: 20px;
+  left: 0;
+  width: 45%;
+  margin-left: 5%;
+
+}
+
+.about p strong{
+  color:white;
+  font-family:sans-serif;
+}
+
+.about-content2 img{
+  width: 300px;
+  height: auto;
+  margin-left: 20%;
+  margin-top: 50px;
+  border-radius: 100px;
+  border-color: rgb(85, 199, 98);
+  border-width: 2px;
+}
+
+.about hr{
+  height: 1px;
+  width: 77%;
+  background-color: grey;
+  border: 0;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  
+}
+
+.bar1{
+  height: 1px;
+  width: 77%;
+  background-color: grey;
+  border: 0;
+  margin: auto;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
