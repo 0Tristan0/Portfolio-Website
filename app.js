@@ -1,7 +1,10 @@
+//Code for nav bar
+
+
 const canvas = document.querySelector(".canvas");
 canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
 
+canvas.height = window.innerHeight;
 const context = canvas.getContext("2d");
 const frameCount = 191;
 
@@ -44,6 +47,46 @@ gsap.fromTo(".hi-text", {opacity:1},
   }
 }
 );
+
+gsap.to(".navbar", {
+  backgroundColor: "#333", // Changes background on scroll
+  duration: 1,
+  scrollTrigger: {
+    trigger: ".navbar",
+    start: "200%",
+    end: "50%",
+    scrub: true
+  }
+});
+
+
+
+
+document.querySelectorAll('.navbar a').forEach(anchor => {
+  anchor.addEventListener('click', function(e) {
+      e.preventDefault(); // Prevent default anchor behavior
+
+      const targetId = this.getAttribute('href').substring(1); // Get target section ID
+      const targetElement = document.getElementById(targetId);
+
+      if (targetElement) {
+          let offset = 0; // Adjust this value to fine-tune position
+          if (targetId == "about"){
+            offset = 55;
+          }
+          else if (targetId == "projects"){
+            offset = 42;
+          }
+          const targetPosition = targetElement.offsetTop - offset;
+
+          window.scrollTo({
+              top: targetPosition,
+              behavior: "smooth" // Enables smooth scrolling
+          });
+      }
+  });
+});
+
 
 images[0].onload = render;
 

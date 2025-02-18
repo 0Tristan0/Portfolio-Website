@@ -3,6 +3,9 @@
     padding: 0;
     box-sizing: border-box;
 }
+html {
+  scroll-behavior: smooth;
+}
 body{
     overflow-x: hidden; 
     background-color: #0f0f0f;
@@ -14,25 +17,73 @@ canvas {
     object-fit: cover;
 }
 
+/* Navbar */
+.navbar{
+  z-index: 2;
+  list-style: none;
+  position:fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 5%;
+  text-emphasis: bold;
+  background-color: transparent;
+  transition: background-color 0.5s ease;
+  padding: 10px;
+}
+
+.navbar ul {
+  display: flex;
+  justify-content: space-evenly;
+  width: 80%;
+  list-style: none;
+}
+
+.navbar ul li{
+  flex: 1;
+  text-align: center;;
+}
+
+.navbar a {
+  display: block;
+  color: rgb(85, 199, 98);;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 150%;
+  font-family: 'Poppins', sans-serif;
+  padding: 10px 15px;
+}
+
+
+
+.navbar a:hover {
+  color: #f0f0f0;
+}
+.about-content{
+  width: 100vw;
+  height: 100vh;
+}
 .hi-text{
     /* makes the elemnt fixxes when the page is scrolled */
+    text-align: center;
     position: fixed;
     /* determines a stacking order. The higher the number the more important */
     z-index: 2;
     color: white;
     font-size: 5rem;
     /* Position */
-    right: 25%;
-    bottom: 55%;
+    top: 20%;
+    left: 50%;
     /* Moves it 20% if its width to the left and 60% of its height upward */
-    transform: translate(-20%,-60%);
+    transform: translate(-50%,50%);
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
   
   .LinkedinImg, .GithubImg {
-    width: 40px;
-    height: 40px;
+    width: 7%;
+    height: auto;
     margin-right: 15px;
   }
   
@@ -44,55 +95,86 @@ canvas {
 
 .about h1{
   color: rgb(85, 199, 98);
-  font-size: 2.4rem;
+  font-size: 2vw;
   font-family: 'Trebuchet MS';
   text-align: center;
-  padding: 20px;
-  margin-top: 100px;
+  padding: 3%;
+  margin-top: 1%;
 }
 
 .about-content{
   display:flex;
-  margin-top: 40px;
+  margin-top: 1%;
 }
 
 .para-about{
   color: grey;
-  font-size: 1.4rem;
+  font-size: 1.4vw;
   font-family: 'Poppins';
   text-align: left;
-  padding: 20px;
   margin-right: 5%;
-  width: 60%;
+  margin-top: .25%;
+  line-height: 200%;
+  width: 50%;
+  height: 60%
 
   
 }
 
 .info{
   color: grey;
-  font-size: 1.2rem;
+  font-size: 1.3vw;
   font-family: 'Poppins';
   text-align: left;
   padding: 20px;
-  left: 0;
-  width: 45%;
-  margin-left: 5%;
+  width: 50%;
+  margin-left: 10%;
+  line-height: 200%;
 
 }
 
 .about p strong{
   color:white;
-  font-family:sans-serif;
+  font-family: 'Trebuchet MS';
+  font-size: 1.4vw;
+}
+
+.about-content2{
+  display: flex;
+  margin-top: 5%;
+  margin-bottom: 5%;
 }
 
 .about-content2 img{
-  width: 300px;
+  width: 20%;
   height: auto;
-  margin-left: 20%;
-  margin-top: 50px;
-  border-radius: 100px;
-  border-color: rgb(85, 199, 98);
-  border-width: 2px;
+  margin-left: 15%;
+  border-radius: 35%;
+}
+
+.about-content2 button{
+  align-items: center;
+  margin-top: 150px;
+}
+
+#resume-button, #email-button{
+  width: 250px;
+  height: 50px;
+  border:none;
+  border-radius: 5px;
+  background-color: rgb(85, 199, 98);
+  font-family: 'Trebuchet MS';
+  color: white;
+  font-size: 17px;
+  font-weight: bold;
+  position: relative;
+  top: -rem;
+}
+
+#email-button:hover, #resume-button:hover{
+  background-color: grey;
+  transform: rotate(2deg);
+  transition: transform 0.3s, opacity 0.3s;
 }
 
 .about hr{
@@ -100,9 +182,8 @@ canvas {
   width: 77%;
   background-color: grey;
   border: 0;
-  margin-top: 15px;
+  margin-top: 15px auto;
   margin-bottom: 15px;
-  
 }
 
 .bar1{
@@ -111,7 +192,106 @@ canvas {
   background-color: grey;
   border: 0;
   margin: auto;
-  margin-top: 50px;
-  margin-bottom: 50px;
+  margin-top: 2%;
+  margin-bottom: 2%;
 }
 
+.projects{
+  background-color: grey;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 100vh;
+}
+
+.projects h1{
+  color: rgb(85, 199, 98);
+  font-size: 2.4rem;
+  font-family: 'Trebuchet MS';
+  text-align: center;
+  padding: 2%;
+  margin-top: 2.5%;
+  margin-bottom: 2.5%;
+}
+
+.buttons-container {
+  display: flex;                  
+  justify-content: space-evenly;  
+  align-items: flex-start;
+  width: 100%;           
+  flex-wrap: wrap;
+  position: relative;
+  
+}
+
+.calculator-project-button{
+  width: 22vw;
+  height: 70vh;
+  margin-left: 0%;
+  color: white;
+  background-color: rgb(45, 45, 45);
+  border: none;
+  border-radius: 5px;
+  font-family: 'Trebuchet MS';
+  font-size: 20px;
+}
+
+.calculator-project-button:hover{
+  background-image: url('Wesbsite Images/Calculator Photo.jpeg');
+  background-size: 22vw 70vh;
+  opacity: 40%;
+  color: transparent;
+  transform: scale3d(1.05, 1.05, 1.05) translateY(-20px);
+  transition: transform 0.3s, opacity 0.3s;
+}
+
+.portfolio-Website-project-button{
+  width: 35vw;
+  height: 35vh;
+  margin-left: 0%;
+  color: white;
+  background-color: rgb(45, 45, 45);
+  border: none;
+  border-radius: 5px;
+  font-family: 'Trebuchet MS';
+  font-size: 20px;
+}
+
+.portfolio-Website-project-button:hover{
+  background-image: url('Wesbsite Images/Portfolio Website Photo.png');
+  background-size: 35vw 35vh;
+  opacity: 40%;
+  color: transparent;
+  transform: scale3d(1.05, 1.05, 1.05) translateY(-20px);
+  transition: transform 0.3s, opacity 0.3s;
+}
+
+.future-project-button1{
+  width: 35vw;
+  height: 35vh;
+  margin-left: 0%;
+  color: white;
+  background-color: rgb(45, 45, 45);
+  border: none;
+  border-radius: 5px;
+  font-family: 'Trebuchet MS';
+  font-size: 20px;
+}
+
+.future-project-button2{
+  width: 72vw;
+  height: 32vh;
+  color: white;
+  background-color: rgb(45, 45, 45);
+  border: none;
+  border-radius: 5px;
+  font-family: 'Trebuchet MS';
+  font-size: 20px;
+  position: absolute; 
+  bottom: 0;
+  margin-left: 24%;;
+}
+
+#linkdein-logo:visited {
+  color:transparent;
+}
